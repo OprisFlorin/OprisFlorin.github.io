@@ -5,8 +5,8 @@ function getWelcomeMsg() {
     return "Wellcome to my site!";
 }
 
-function getColor(){
-    var date = new Date ();
+function getColor() {
+    var date = new Date();
     console.log(date.getMinutes());
     if (date.getMinutes() > 19) {
         return "green"
@@ -33,7 +33,7 @@ function showPage(page) {
     document.getElementById(page).style.display = 'block';
 }
 
-function initMenu(){
+function initMenu() {
     console.log('initMenu here!')
     var links = document.querySelectorAll("#top-menu-bar a");
     console.info(links);
@@ -45,7 +45,7 @@ function initMenu(){
     }
 }
 
-function clickOnMenuItem () {
+function clickOnMenuItem() {
     console.warn('clicked on menu', this);
     hideAllPages();
     var pageId = this.getAttribute('data-page');
@@ -60,4 +60,6 @@ function hideAllPages() {
 }
 
 initMenu();
+
+
 
